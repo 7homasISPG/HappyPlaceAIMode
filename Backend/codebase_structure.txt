@@ -1,0 +1,95 @@
+
+📂 ./app/agents
+  📄 tools.py
+     class ToolRegistry (line 15)
+       └── def __init__() (line 22)
+       └── def _create_api_tool() (line 33)
+     def hello_tool() (line 82)
+     def geocode_city() (line 92)
+
+📂 ./app/api
+  📄 workflow_routes.py
+  📄 __init__.py
+  📄 trigger_routes.py
+  📄 auth_routes.py
+  📄 agent_routes.py
+  📄 routes.py
+     class UserQueryRequest (line 60)
+     class RAGQueryRequest (line 66)
+     class URLIngestRequest (line 71)
+     class SupervisorProfileRequest (line 74)
+     class AssistantsConfigRequest (line 80)
+  📄 tool_routes.py
+  📄 rules_routes.py
+
+📂 ./app/data
+  📄 embedder.py
+     def embed_and_store_chunks() (line 5)
+  📄 __init__.py
+  📄 chunker.py
+     def chunk_text() (line 5)
+     def chunk_documents() (line 15)
+  📄 data_ingestion_pipeline.py
+     def run_ingestion_pipeline() (line 12)
+  📄 usage.py
+     def load_from_source() (line 37)
+  📄 loader.py
+     def extract_text_from_url() (line 3)
+     def load_multiple_urls() (line 10)
+
+📂 ./app/data/connectors
+  📄 docx_connector.py
+     class DOCXConnector (line 4)
+       └── def load_data() (line 5)
+  📄 api_connector.py
+     class APIConnector (line 3)
+       └── def load_data() (line 6)
+  📄 url_connector.py
+     class URLConnector (line 4)
+       └── def load_data() (line 5)
+  📄 image_connector.py
+     class ImageConnector (line 4)
+       └── def load_data() (line 5)
+  📄 pdf_connector.py
+     class PDFConnector (line 4)
+       └── def load_data() (line 5)
+  📄 base_connector.py
+     class BaseConnector (line 3)
+       └── def load_data() (line 5)
+
+📂 ./app/rag
+  📄 __init__.py
+  📄 pipeline.py
+     def get_rag_answer() (line 10)
+  📄 retriever.py
+     def _initialize_vector_store() (line 11)
+     def get_vector_store() (line 46)
+     def get_retriever() (line 55)
+  📄 prompt_template.py
+     def get_structured_prompt_template() (line 1)
+
+
+📂 ./test
+  📄 test_agents.py
+     def get_auth_token() (line 17)
+     def test_get_agents() (line 40)
+     def test_create_agent() (line 68)
+  📄 test_injection.py
+     def get_auth_token() (line 20)
+     def trigger_ingestion_endpoint() (line 52)
+  📄 test_pipeline.py
+     def test_get_rag_answer_basic() (line 9)
+
+📂 ./ui
+  📄 __init__.py
+  📄 main_mesop.py
+     def page() (line 16)
+     def transform() (line 23)
+  📄 main_ui.py
+
+
+├── autogen_runner3.py      # (No change)
+├── config.py               # (Modified)
+├── main.py                 # (New - The new, slim entry point)
+└── state.py                # (No change)
+└── orchestrator.py

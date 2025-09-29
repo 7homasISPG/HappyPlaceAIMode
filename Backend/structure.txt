@@ -1,0 +1,35 @@
+app/
+├── api/
+│   ├── __init__.py
+│   ├── auth_routes.py      # Handles /login, /register
+│   └── routes.py           # Handles /ask, /upload, /chat-history, admin
+├── auth/
+│   ├── __init__.py
+│   ├── dependencies.py     # (Modified)
+│   ├── models.py           # (New - for DB object models)
+│   ├── schemas.py          # (Your existing file)
+│   └── utils.py            # (Your existing file)
+├── data/
+│   ├── __init__.py
+│   ├── chunker.py          # (No change)
+│   ├── embedder.py         # (No change)
+│   ├── usage.py            # (No change)
+│   └── ... (connectors)
+├── db/
+│   ├── __init__.py
+│   ├── crud.py             # (New - Replaces logger.py)
+│   └── database.py         # (New - DB connection)
+├── rag/
+│   ├── __init__.py
+│   ├── pipeline.py         # (No change)
+│   ├── prompt_template.py  # (No change)
+│   └── retriever.py        # (No change)
+├── utils/
+│   ├── __init__.py
+│   ├── language_detect.py  # (No change)
+│   └── translator.py       # (No change)
+├── __init__.py
+├── autogen_runner3.py      # (No change)
+├── config.py               # (Modified)
+├── main.py                 # (New - The new, slim entry point)
+└── state.py                # (No change)

@@ -1,0 +1,80 @@
+# --- Environment Variables ---
+# Never commit secret keys, API keys, or database URIs.
+# Create a .env.example file to show what variables are needed.
+.env
+.env.*
+
+# --- Python ---
+# Byte-compiled / optimized / C files
+__pycache__/
+*.py[cod]
+*$py.class$
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+# Add your specific virtual environment folder name if it's different
+venv/
+.venv/
+env/
+ENV/
+pyvenv.cfg
+
+# Mypy cache
+.mypy_cache/
+
+# pytest cache
+.pytest_cache/
+
+# --- Project-Specific Files & Data ---
+
+# Local log files and databases
+# Your logger.py creates a database in this folder.
+logs/
+*.db
+*.sqlite3
+
+# User-uploaded data and knowledge base files.
+# It's better to store these in a cloud storage service (like S3) in production.
+# You can explicitly track *sample* files if needed by adding !Knowledge_Base/sample.pdf
+Knowledge_Base/
+
+# --- IDE & Editor Configuration ---
+# Visual Studio Code
+.vscode/
+
+# JetBrains (PyCharm, WebStorm, etc.)
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# --- Operating System Files ---
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
